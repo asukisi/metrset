@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <a class="header-logo" href="/" title="Перейти на главную страницу">
+            <p>Учебный год</p>
+            <img src="img/Учебный_год-!!!-color.jpg" alt="Логотип">
+        </a>
+    <button class="burger-menu" id="burger-btn">
+        ☰
+    </button>
+    <nav id="mobile-menu">
+        <ul>
+            <li><a href="#">Индивидуальные поставки</a></li>
+            <li><a href="about.html">О нас</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <p>Нажми на меня :3</p>
+    <a id="btn" href="#">Москалев Артем</a>
+    <img id="image" style="display: none;" src="./img/22910c7b33700c4c3277161590f59e2d.jpg" alt="Изображение">
+</main>
+
+<script>
+    document.getElementById("btn").addEventListener("click", (event) => {
+        event.preventDefault(); 
+        const img = document.getElementById("image");
+        img.style.display = "block"; 
+    });
+</script>
+</html>

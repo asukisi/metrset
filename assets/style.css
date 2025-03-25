@@ -11,9 +11,6 @@ main {
     flex-grow: 1;
     padding: 20px;
 }
-h1{
-    
-}
 
 header {
     display: flex;
@@ -24,7 +21,15 @@ header {
     position: relative;
 }
 
-
+.header-logo {
+    display: flex;
+    align-items: center; /* Центрирование по горизонтали */
+    justify-content: center; /* Центрирование по вертикали (если нужно) */
+    text-align: center; 
+}
+.header-logo p{
+    margin-right: 10px;
+}
 header a img {
     max-height: 50px;
 }
@@ -97,14 +102,12 @@ main a {
     margin-top: 10px;
     border-radius: 5px;
     font-size: 16px;
-    
     text-align: center;
 }
 
 main a:hover {
     background-color: rgb(100, 40, 200);
 }
-
 
 footer {
     display: flex;
@@ -122,15 +125,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-#footer-left a {
-    color: #fff;
-    text-decoration: none;
-}
-
-#footer-left a:hover {
-    text-decoration: underline;
 }
 
 footer ul {
@@ -186,7 +180,6 @@ footer li:hover {
     .burger-menu {
         display: block;
     }
-
    
     nav.open {
         display: flex;

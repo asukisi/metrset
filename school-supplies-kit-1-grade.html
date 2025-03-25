@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Набор для первоклассника</title>
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/product.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <a class="header-logo" href="/" title="Перейти на главную страницу">
+            <p>Учебный год</p>
+            <img src="img/Учебный_год-!!!-color.jpg" alt="Логотип">
+        </a>
+        <button class="burger-menu" id="burger-btn">
+            ☰
+        </button>
+        <nav id="mobile-menu">
+            <ul>
+                <li><a href="#">Индивидуальные поставки</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="gallery">
+            <img src="img/first-class/shool-enrollment-main.png" alt="">
+            <img src="img/first-class/shool-enrollment-1.png" alt="">
+            <img src="img/first-class/shool-enrollment-2.png" alt="">
+            <img src="img/first-class/shool-enrollment-3.png" alt="">
+            <img src="img/first-class/shool-enrollment-4.png" alt="">
+            <img src="img/first-class/shool-enrollment-5.jpg" alt="">
+            <img src="img/first-class/shool-enrollment-6.jpg" alt="">
+            <img src="img/first-class/shool-enrollment-description.jpg" alt="">
+        </div>
+        
+        <div class="tabs">
+            <div class="tab active" data-tab="description">Описание</div>
+            <div class="tab" data-tab="certificate">Сертификаты</div>
+            <div class="tab" data-tab="reviews">Отзывы</div>
+        </div>
+        
+        <div class="tab-content active" id="description">
+            <p>Этот набор содержит все необходимое для первоклассника, включая канцтовары и учебные материалы.</p>
+        </div>
+        <div class="tab-content" id="certificate">
+            <img src="img/Scan_0001.jpg" alt="">
+        </div>
+        <div class="tab-content" id="reviews">
+            <p>Отличный набор! Моему ребенку понравилось! - Анна</p>
+        </div>
+        <h2>Свяжитесь c нами</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Ваше имя" required>
+            <input type="text" id="number" placeholder="Ваш номер телефона" required>
+            <input type="email" id="email" placeholder="Ваш email(не обязательно)">
+            <textarea id="message" placeholder="Ваше сообщение" rows="4" required></textarea>
+            <button id="send" type="submit">Отправить</button>
+        </form>
+        <video src="./img/first-class/YouCut_20231031_104416800.mp4" controls></video>
+    </main>
+    
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="Увеличенное изображение">
+    </div>
+    
+    <footer>
+        <div id="footer-left">
+            <p>Проект компании ООО "МЭТР"</p>
+            <a href="https://metropt.ru" target="_blank">Наш главный сайт: https://metropt.ru/</a>
+            <p>&copy; 2025 Все права защищены</p>
+        </div>
+        <ul>
+            <li>
+                <img src="./icons/BxsPhone.svg" alt="Phone icon">
+                <a href="tel:+79103470074">+7 910 347-00-74</a>
+            </li>
+            <li>
+                <img src="./icons/BxsPhone.svg" alt="Phone icon">
+                <a href="tel:+79107498092">+7 910 749-80-92</a>
+            </li>
+            <li>
+                <img src="./icons/MailSend.svg" alt="Email icon">
+                <a href="mailto:zakaz@metropt.ru">zakaz@metropt.ru</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="js/product.js"></script>
+    <script>
+        (function() {
+            emailjs.init("qq9u-sjd34iAw0S7X"); 
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.send("service_54a2t3q", "template_2ax5m9n", {
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            }).then(function(response) {
+                alert("Сообщение успешно отправлено!");
+            }, function(error) {
+                alert("Ошибка при отправке: " + error.text);
+            });
+        });
+    </script>
+
+</body>
+</html>
