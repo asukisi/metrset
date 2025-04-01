@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/product.css">
     <link rel="stylesheet" href="assets/style.css">
-    <script defer src="assets/script.js"></script>
+    <script defer src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
@@ -16,16 +16,15 @@
             <p>Учебный год</p>
             <img src="img/Учебный_год-!!!-color.jpg" alt="Логотип">
         </a>
-        <button class="burger-menu" id="burger-btn">
-            ☰
-        </button>
-        <nav id="mobile-menu">
-            <ul>
-                <li><a href="#">Индивидуальные поставки</a></li>
-                <li><a href="about.html">О нас</a></li>
-            </ul>
-        </nav>
-    </header>
+    <button class="burger-menu" id="burger-btn">
+        ☰
+    </button>
+    <nav id="mobile-menu">
+        <ul>
+            <li><a href="about.html">О нас</a></li>
+        </ul>
+    </nav>
+</header>
     
     <main>
         <div class="gallery">
@@ -46,7 +45,22 @@
         </div>
         
         <div class="tab-content active" id="description">
-            <p>Этот набор содержит все необходимое для первоклассника, включая канцтовары и учебные материалы.</p>
+            <h2>Характеристики и описание</h2>
+            <br>
+            <h3>Дополнительная информация</h3>
+            <p>Состав набора: 147 предметов канцелярских</p>
+            <p>Страна производства: Чад</p>
+            <br>
+            <h3>Габариты</h3>
+            <p>Вес товара с упаковкой: 5000 г</p>
+            <p>Длина упаковки: 34 см</p>
+            <p>Высота упаковки: 14 см</p>
+            <p>Ширина упаковки: 31 см</p>
+            <br>
+            <h3>Описание</h3>
+            <p>В мире канцелярии каждый маленький школьник и школьница может найти что-то особенное для себя! Наши милые предметы, идеально подходящие как для мальчиков, так и для девочек, помогут сделать учебу увлекательной и стильной. В наборе канцелярских принадлежностей собраны все необходимые элементы для комфортного обучения в школе и садике. Красивые ручки, яркие карандаши и творческие корректоры — всё это вдохновит подростков на успешное освоение каждого учебного предмета.
+                Мы предлагаем не просто канцелярию, а целый бокс с удивительными школьными аксессуарами! В нашем специальном наборе вы найдете всё для рисования, выполнения домашних заданий и подготовки к контрольным. Замазка поможет легко исправить ошибки в тетрадях, а органайзер позволит навести порядок среди множества принадлежностей. Такой подарочный набор станет прекрасным сюрпризом для любого ребенка при начале учебного года, а школьники оценят его по достоинству.
+                Мы уверены, что с нашей канцелярией учёба станет не только полезной, но и увлекательной! Придайте своему ребенку стиль и уверенность с нашими красивыми и функциональными товарами. Идеальные подарки для начальных классов и подростков уже ждут вас! Не упустите возможность порадовать своих детей — приобретите наш набор канцелярских принадлежностей прямо сейчас и сделайте первый шаг к успеху в школе!</p>
         </div>
         <div class="tab-content" id="certificate">
             <img src="img/Scan_0001.jpg" alt="">
@@ -54,14 +68,38 @@
         <div class="tab-content" id="reviews">
             <p>Отличный набор! Моему ребенку понравилось! - Анна</p>
         </div>
-        <h2>Свяжитесь c нами</h2>
-        <form id="contact-form">
-            <input type="text" id="name" placeholder="Ваше имя" required>
-            <input type="text" id="number" placeholder="Ваш номер телефона" required>
-            <input type="email" id="email" placeholder="Ваш email(не обязательно)">
-            <textarea id="message" placeholder="Ваше сообщение" rows="4" required></textarea>
-            <button id="send" type="submit">Отправить</button>
-        </form>
+        <div id="feedback">
+            <div id="feedback__header">
+                <h2>Свяжитесь c нами</h2>
+                <p>Заполните форму ниже и наш менеджер свяжется с вами в ближайшее время</p>
+            </div>    
+            <div id="feedback-container">
+                <form id="feedback__form">
+                    <input type="text" id="name" placeholder="Ваше имя" required>
+                    <input type="text" id="number" placeholder="Ваш номер телефона" required>
+                    <input type="email" id="email" placeholder="Ваш email(не обязательно)">
+                    <textarea id="message" placeholder="Ваше сообщение" rows="4" required></textarea>
+                    <button id="send" type="submit">Отправить</button>
+                </form>
+                <div id="feedback_contacts">
+                    <ul>
+                        <li>
+                            <img src="./icons/BxsPhone.svg" alt="Phone icon">
+                            <a id="contact" href="tel:+79103470074">+7 910 347-00-74</a>
+                        </li>
+                        <li>
+                            <img src="./icons/BxsPhone.svg" alt="Phone icon">
+                            <a id="contact" href="tel:+79107498092">+7 910 749-80-92</a>
+                        </li>
+                        <li>
+                            <img src="./icons/MailSend.svg" alt="Email icon">
+                            <a id="contact" href="mailto:zakaz@metropt.ru">zakaz@metropt.ru</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
         <video src="./img/first-class/YouCut_20231031_104416800.mp4" controls></video>
     </main>
     
@@ -96,11 +134,12 @@
             emailjs.init("qq9u-sjd34iAw0S7X"); 
         })();
 
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        document.getElementById('feedback__form').addEventListener('submit', function(event) {
             event.preventDefault();
 
             emailjs.send("service_54a2t3q", "template_2ax5m9n", {
                 from_name: document.getElementById("name").value,
+                number: document.getElementById("number").value,
                 from_email: document.getElementById("email").value,
                 message: document.getElementById("message").value
             }).then(function(response) {

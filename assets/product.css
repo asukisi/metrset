@@ -87,19 +87,53 @@ video{
     padding: 10px 15px;
     background-color: red;
     cursor: pointer;
+}
+
+#feedback-container{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
     margin-bottom: 15px;
 }
 
-#contact-form{
-    padding: 5px;
+#feedback-container input, 
+#feedback-container textarea,
+#feedback-container button{
+    width: 40vh;
+    padding: 8px;
+}
+
+#feedback{
+    border: 1px solid #ddd;
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+#feedback__header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#feedback__form{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-bottom: 15px;
-    align-items: center;
 }
 
-#contact-form input, textarea, button{
-    width: 40vh;
-    padding: 8px;
+#feedback_contacts{
+    display: flex;
+    justify-content: end;
+    margin-left: 30px;
+}
+
+#feedback_contacts ul li{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+#contact{
+    color: black
 }
