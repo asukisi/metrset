@@ -17,31 +17,31 @@
     <header>
         <a class="header-logo" href="/" title="Перейти на главную страницу">
             <p>Учебный год</p>
-            <img src="himg/header-logo.webp" alt="Логотип">
+            <img src="img/header-logo.webp" alt="Логотип">
         </a>
-    <button class="burger-menu" id="burger-btn">
-        ☰
-    </button>
+        <button class="burger-menu" id="burger-btn" aria-label="Меню навигации">
+            &#9776;
+        </button>
     <nav id="mobile-menu">
         <ul>
-            <li>
+            <li class="guidance">
                 <img src="./icons/BxsPhone.svg" alt="Phone icon">
                 <a href="tel:+79103470074">+7 910 347-00-74</a>
             </li>
-            <li>
+            <li class="guidance">
                 <img src="./icons/BxsPhone.svg" alt="Phone icon">
                 <a href="tel:+79107498092">+7 910 749-80-92</a>
             </li>
-            <li>
+            <li class="guidance">
                 <img src="./icons/MailSend.svg" alt="Email icon">
                 <a href="mailto:zakaz@metropt.ru">zakaz@metropt.ru</a>
             </li>
-            <li>
-                <a href="about.html">О нас</a>
+            <li class="guidance">
+                <a href="about.html" title="Информация о компании">О нас</a>
             </li>
-            </ul>
-        </nav>
-    </header>
+        </ul>
+    </nav>
+</header>
     
     <main>
         <div class="gallery">
@@ -58,9 +58,9 @@
         </div>
         
         <div class="tabs">
-            <div class="tab active" data-tab="description">Описание</div>
-            <div class="tab" data-tab="certificate">Сертификаты</div>
-            <div class="tab" data-tab="reviews">Отзывы</div>
+            <button class="tab active" data-tab="description">Описание</button>
+            <button class="tab" data-tab="reviews">Отзывы</button>
+            <button class="tab" data-tab="certificate">Сертификаты</button>
         </div>
         
         <div class="tab-content active" id="description">
@@ -85,8 +85,16 @@
             <img src="img/certificate.webp" alt="">
         </div>
         <div class="tab-content" id="reviews">
-            <p>Отличный набор! Моему ребенку понравилось! - Анна</p>
-        </div>
+            <div class="review">
+                <h3>Наталья</h3>
+                <p class="review-date">Выкупили: <strong>29 января, 10:05</strong></p>
+                <div class="review-content">
+                    <p><strong>Достоинства:</strong> Обалденный набор. Сама бы училась с удовольствием!</p>
+                    <p><strong>Комментарий:</strong> Очень хороший набор! Качественный пластилин, прозрачные линейки — такие, как надо. Гуашь и краски тоже понравились. Дневник современный, модный, ластики белые, хорошие. Много ручек — все отлично пишут. А карандаши с таблицей умножения — просто мечта! С таким набором легко можно учиться на пятёрки.</p>
+                    <p><strong>Отдельное спасибо</strong> за подарок — пенал и пакет!</p>
+                </div>
+            </div>
+        </div>        
         <div id="feedback">
             <div id="feedback__header">
                 <h2>Свяжитесь c нами</h2>
@@ -128,23 +136,23 @@
     <footer>
         <div id="footer-left">
             <p>Проект компании ООО "МЭТР"</p>
-            <a href="https://metropt.ru" target="_blank">Наш главный сайт: https://metropt.ru/</a>
+            <a class="guidance" href="https://metropt.ru" target="_blank">Наш главный сайт: https://metropt.ru</a>
             <p>&copy; 2025 Все права защищены</p>
         </div>
         <ul>
-            <li>
+            <li class="guidance">
                 <img src="./icons/BxsPhone.svg" alt="Phone icon">
                 <a href="tel:+79103470074">+7 910 347-00-74</a>
             </li>
-            <li>
+            <li class="guidance">
                 <img src="./icons/BxsPhone.svg" alt="Phone icon">
                 <a href="tel:+79107498092">+7 910 749-80-92</a>
             </li>
-            <li>
+            <li class="guidance">
                 <img src="./icons/BxsPhone.svg" alt="Phone icon">
                 <a href="tel:246-11-12">246-11-12</a>
             </li>
-            <li>
+            <li class="guidance">
                 <img src="./icons/MailSend.svg" alt="Email icon">
                 <a href="mailto:zakaz@metropt.ru">zakaz@metropt.ru</a>
             </li>
