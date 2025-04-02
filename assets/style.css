@@ -18,6 +18,7 @@ header {
     align-items: center;
     padding: 10px 20px;
     background-color: rgb(131, 56, 236);
+
 }
 
 header ul li{
@@ -28,7 +29,7 @@ header ul li{
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center; 
+    
 }
 .header-logo p{
     margin-right: 10px;
@@ -144,6 +145,11 @@ footer li img {
     height: 20px;
 }
 
+.guidance:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
 @media (max-width: 768px) {
     nav {
         display: none;
@@ -182,9 +188,4 @@ footer li img {
     #footer-left{
         flex: 1; 
     }
-}
-
-.guidance:hover{
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
 }
