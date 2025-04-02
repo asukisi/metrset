@@ -23,7 +23,7 @@ header {
 
 header ul li{
     display: flex;
-    align-items: center ;
+    align-items: center;
 }
 .header-logo {
     display: flex;
@@ -66,7 +66,12 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
+h1{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header ul li:hover{
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
@@ -114,7 +119,6 @@ nav a:hover {
 footer {
     display: flex;
     justify-content: space-between;
-    
     padding: 20px;
     background-color: #333;
     color: white;
