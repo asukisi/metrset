@@ -152,3 +152,50 @@ video{
         height: auto; /* Автоматическая высота */
     }
 }
+
+.review {
+    background: #f9f9f9;
+    border-left: 5px solid #4CAF50;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.review h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.review-date {
+    font-size: 14px;
+    color: #777;
+}
+
+.review-content p {
+    margin: 5px 0;
+}
+
+.review-content strong {
+    color: #444;
+}
+
+.product-info, .product-description {
+    background: #f9f9f9;
+    border-left: 5px solid #4CAF50;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.product-info h3, .product-description h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.product-info p, .product-description p {
+    margin: 5px 0;
+}
+
+.product-info strong, .product-description strong {
+    color: #444;
+}
