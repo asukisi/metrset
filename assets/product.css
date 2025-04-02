@@ -14,6 +14,11 @@ body {
     color: white;
     border-radius: 5px;
 }
+
+.tab:hover{
+    background-color: rgb(100, 40, 200);
+}
+
 .tab.active {
     background: #6200ea;
 }
