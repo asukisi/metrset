@@ -148,8 +148,8 @@ video{
 
 @media (max-width: 768px) {
     #certificate img {
-        width: 100%; /* Полная ширина экрана */
-        height: auto; /* Автоматическая высота */
+        width: 100%; 
+        height: auto; 
     }
 }
 
