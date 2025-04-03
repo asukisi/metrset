@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/product.css">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="icon" href="icons/pen.svg" type="image/svg+xml">
+    <link rel="icon" href="icons/uchebny-god-page.png" type="image/png">
     <script defer src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
@@ -62,24 +62,24 @@
         </div>
         
         <div class="tab-content active" id="description">
-            <h2>📌 Характеристики и описание</h2>
+            <h2>Характеристики и описание</h2>
         
             <div class="product-info">
-                <h3>📦 Дополнительная информация</h3>
-                <p><strong>📋 Состав набора:</strong> 147 канцелярских предметов</p>
-                <p><strong>🌍 Страна производства:</strong> Россия</p>
+                <h3>Дополнительная информация</h3>
+                <p><strong>Состав набора:</strong> 147 канцелярских предметов</p>
+                <p><strong>Страна производства:</strong> Россия</p>
             </div>
         
             <div class="product-info">
-                <h3>📏 Габариты</h3>
-                <p><strong>⚖ Вес с упаковкой:</strong> 5000 г</p>
-                <p><strong>📏 Длина упаковки:</strong> 34 см</p>
-                <p><strong>📐 Высота упаковки:</strong> 14 см</p>
-                <p><strong>📦 Ширина упаковки:</strong> 31 см</p>
+                <h3>Габариты</h3>
+                <p><strong>Вес с упаковкой:</strong> 5000 г</p>
+                <p><strong>Длина упаковки:</strong> 34 см</p>
+                <p><strong>Высота упаковки:</strong> 14 см</p>
+                <p><strong>Ширина упаковки:</strong> 31 см</p>
             </div>
         
             <div class="product-description">
-                <h3>📝 Описание</h3>
+                <h3>Описание</h3>
                 <p>В мире канцелярии каждый школьник найдёт что-то особенное для себя! Наши предметы, идеально подходящие как для мальчиков, так и для девочек, помогут сделать учебу увлекательной и стильной.</p>
                 
                 <p>Мы предлагаем не просто канцелярию, а целый <strong>бокс с удивительными школьными аксессуарами</strong>! В нашем специальном наборе есть всё для рисования, выполнения домашних заданий и подготовки к контрольным. Замазка поможет легко исправить ошибки в тетрадях, а органайзер обеспечит порядок среди множества принадлежностей.</p>
@@ -104,7 +104,13 @@
             </div>
         </div>        
         <div class="tab-content" id="certificate">
-            <img src="img/certificate.webp" alt="">
+            <div class="certificate-container">
+                <img class="certificate" src="img/certificate1.webp" alt="">
+                <img class="certificate" src="img/certificate2.webp" alt="">
+                <img class="certificate" src="img/metr-certificate1.webp" alt="">
+                <img class="certificate" src="img/metr-certificate2.webp" alt="">
+                <img class="certificate" src="img/metr-certificate3.webp" alt="">
+            </div>
         </div>
         <div id="feedback">
             <div id="feedback__header">
@@ -179,7 +185,7 @@
         document.getElementById('feedback__form').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            emailjs.send("service_54a2t3q", "template_2ax5m9n", {
+            emailjs.send("service_tamfe2u", "template_rim9iko", {
                 from_name: document.getElementById("name").value,
                 number: document.getElementById("number").value,
                 from_email: document.getElementById("email").value,
