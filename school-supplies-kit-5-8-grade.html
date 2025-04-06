@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Школьный набор канцелярии для 5-8 классов</title>
     <meta name="description" content="Набор канцелярии для школьников 5-8 классов: ручки, карандаши, тетради, закладки и другое">
-    <meta name="keywords" content="школьные канцелярские наборы, наборы для школьников оптом, канцелярия на весь учебный год, школьные наборы для первоклассников, наборы для 2-4 класса, наборы для девочек, наборы для 5-8 класса, наборы для 9-11 класса, школьные наборы для детского сада, эконом наборы, комплектация наборов под бюджет, наборы для подарков, канцелярия для подарков детям, канцелярия для подшефных школ, оптовая продажа канцелярии, школьные канцелярские товары оптом">
+    <meta name="keywords" content="Школьные канцелярские наборы, наборы для школьников оптом, канцелярия на весь учебный год, школьные наборы для первоклассников, наборы для 2-4 класса, наборы для девочек, наборы для 5-8 класса, наборы для 9-11 класса, школьные наборы для детского сада, эконом наборы, комплектация наборов под бюджет, наборы для подарков, канцелярия для подарков детям, канцелярия для подшефных школ, оптовая продажа канцелярии, школьные канцелярские товары оптом">
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/product.css">
     <link rel="stylesheet" href="assets/style.css">
@@ -62,7 +62,7 @@
         </div>
         
         <div class="tab-content active" id="description">
-            <h2>Характеристики и описание</h2>
+            <h2 id="title-description">Характеристики и описание</h2>
         
             <div class="product-info">
                 <h3>Дополнительная информация</h3>
@@ -114,14 +114,16 @@
         </div>        
         <div id="feedback">
             <div id="feedback__header">
-                <h2>Свяжитесь c нами</h2>
-                <p>Заполните форму ниже и наш менеджер свяжется с вами в ближайшее время</p>
+                <div id="title-description">
+                    <h2>Свяжитесь c нами</h2>
+                    <p>Заполните форму ниже и наш менеджер свяжется с вами в ближайшее время</p>
+                </div>  
             </div>    
             <div id="feedback-container">
                 <form id="feedback__form">
-                    <input type="text" id="name" placeholder="Ваше имя" required>
-                    <input type="text" id="number" placeholder="Ваш номер телефона" required>
-                    <input type="email" id="email" placeholder="Ваш email(не обязательно)">
+                    <input type="text" id="name" placeholder="Ваше имя" required autocomplete="name">
+                    <input type="text" id="number" placeholder="Ваш номер телефона" required autocomplete="tel">
+                    <input type="email" id="email" placeholder="Ваш email(не обязательно)" autocomplete="email">
                     <textarea id="message" placeholder="Ваше сообщение" rows="4" required></textarea>
                     <button id="send" type="submit">Отправить</button>
                 </form>
@@ -134,6 +136,10 @@
                         <li>
                             <img src="./icons/BxsPhone.svg" alt="Phone icon">
                             <a class="contact" href="tel:+79107498092">+7 910 749-80-92</a>
+                        </li>
+                        <li>
+                            <img src="./icons/BxsPhone.svg" alt="Phone icon">
+                            <a class="contact" href="tel:+74732461112">+7 473 246-11-12</a>
                         </li>
                         <li>
                             <img src="./icons/MailSend.svg" alt="Email icon">
@@ -168,7 +174,7 @@
             </li>
             <li class="guidance">
                 <img src="./icons/BxsPhone.svg" alt="Phone icon">
-                <a href="tel:246-11-12">246-11-12</a>
+                <a href="tel:+74732461112">+7 473 246-11-12</a>
             </li>
             <li class="guidance">
                 <img src="./icons/MailSend.svg" alt="Email icon">
@@ -176,7 +182,6 @@
             </li>
         </ul>
     </footer>
-    <script src="js/product.js"></script>
     <script>
         (function() {
             emailjs.init("qq9u-sjd34iAw0S7X"); 

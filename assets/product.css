@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
+    margin: 13px 0;
 }
 
 .tabs button{
@@ -30,9 +30,9 @@ body {
     display: none;
     padding: 20px;
     border: 1px solid #ddd;
-    margin-top: 10px;
+    margin: 13px 0;
     text-align: center;
-    margin-bottom: 10px;
+    
 }
 .tab-content.active {
     display: block;
@@ -41,8 +41,6 @@ body {
     display: flex;
     overflow-x: auto;
     gap: 10px;
-    margin-top: 20px;
-    padding-bottom: 10px;
 }
 .gallery img {
     width: 200px;
@@ -50,6 +48,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s;
+    padding: 13px 0;
 }
 .gallery img:hover {
     transform: scale(1.1);
@@ -88,9 +87,13 @@ video{
     display: block;
     border-radius: 5px;
     color: white;
-    padding: 10px 15px;
+    padding: 15px;
     background-color: red;
     cursor: pointer;
+}
+
+#send:hover{
+    background-color: rgb(220, 20, 20); 
 }
 
 #feedback-container{
@@ -105,10 +108,12 @@ video{
 #feedback-container textarea,
 #feedback-container button{
     width: 40vh;
-    padding: 8px;
+    padding: 10px;
 }
 
 #feedback{
+    padding: 20px;
+    margin: 13px 0;
     border: 1px solid #ddd;
     display: flex;
     margin-bottom: 10px;
@@ -130,7 +135,7 @@ video{
 #feedback_contacts{
     display: flex;
     justify-content: end;
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 #feedback_contacts ul li{
@@ -174,3 +179,8 @@ video{
 .review-content strong {
     color: #444;
 }
+
+#title-description{
+    margin-bottom: 5px;
+}
+
