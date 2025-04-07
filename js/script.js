@@ -1,6 +1,6 @@
 document.getElementById("burger-btn").addEventListener("click", function (event) {
     document.getElementById("mobile-menu").classList.toggle("open");
-    event.stopPropagation(); // Предотвращаем всплытие клика
+    event.stopPropagation(); 
 });
 
 document.addEventListener("click", function (event) {
@@ -12,7 +12,6 @@ document.addEventListener("click", function (event) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Обработчики для вкладок
     document.querySelectorAll('.tab').forEach(tab => {
         tab.addEventListener('click', function() {
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -22,30 +21,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Лайтбокс
+    
     const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
 
     function openLightbox(src) {
-        lightboxImg.src = src;
+        const placeholder = 'https://via.placeholder.com/800x600?text=No+Image'; 
+    
+        const lightbox = document.getElementById('lightbox');
+        lightbox.innerHTML = `<img src="${src || placeholder}" alt="Увеличенное изображение">`;
         lightbox.classList.add('active');
     }
+      
 
-    // Подключаем галерею
     document.querySelectorAll('.gallery img').forEach(img => {
         img.addEventListener('click', function() {
             openLightbox(this.src);
         });
     });
 
-    // Подключаем сертификаты
     document.querySelectorAll('.certificate-container .certificate').forEach(img => {
         img.addEventListener('click', function() {
             openLightbox(this.src);
         });
     });
 
-    // Закрытие лайтбокса
     lightbox.addEventListener('click', () => {
         lightbox.classList.remove('active');
     });

@@ -14,6 +14,23 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+        ym(100816206, "init", {
+             clickmap:true,
+             trackLinks:true,
+             accurateTrackBounce:true,
+             webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/100816206" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <header>
         <a class="header-logo" href="/" title="Перейти на главную страницу">
             <p>Учебный год</p>
@@ -62,7 +79,7 @@
         </div>
         
         <div class="tab-content active" id="description">
-            <h2 id="title-description">Характеристики и описание</h2>
+            <h2 class="title-description">Характеристики и описание</h2>
         
             <div class="product-info">
                 <h3>Дополнительная информация</h3>
@@ -114,7 +131,7 @@
         </div>
         <div id="feedback">
             <div id="feedback__header">
-                <div id="title-description">
+                <div class="title-description">
                     <h2>Свяжитесь c нами</h2>
                     <p>Заполните форму ниже и наш менеджер свяжется с вами в ближайшее время</p>
                 </div>  
@@ -184,21 +201,46 @@
     </footer>
     <script>
         (function() {
-            emailjs.init("qq9u-sjd34iAw0S7X"); 
+            emailjs.init("qq9u-sjd34iAw0S7X");
         })();
-
+    
         document.getElementById('feedback__form').addEventListener('submit', function(event) {
             event.preventDefault();
-
+    
+            const submitButton = document.getElementById('send');
+            submitButton.disabled = true;
+            const originalText = submitButton.textContent;
+            submitButton.textContent = "Отправка...";
+    
             emailjs.send("service_tamfe2u", "template_rim9iko", {
                 from_name: document.getElementById("name").value,
                 number: document.getElementById("number").value,
                 from_email: document.getElementById("email").value,
                 message: document.getElementById("message").value
             }).then(function(response) {
-                alert("Сообщение успешно отправлено!");
+                ym(100816206, 'reachGoal', 'submit');
+                const successMessage = document.createElement('div');
+                successMessage.classList.add('popup-success');
+                successMessage.innerHTML = `
+                    <span class="popup-close" id="popupClose">&times;</span>
+                    <p>Ваше сообщение отправлено. Мы скоро свяжемся с вами!</p>
+                `;
+                document.body.appendChild(successMessage);
+    
+                const closeButton = document.getElementById('popupClose');
+                closeButton.addEventListener('click', () => {
+                    successMessage.remove();
+                });
+    
+                // Автоматическое закрытие через 5 секунд
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
             }, function(error) {
                 alert("Ошибка при отправке: " + error.text);
+            }).finally(function() {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
             });
         });
     </script>

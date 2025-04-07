@@ -156,7 +156,8 @@ footer li img {
     border-left: 5px solid #4CAF50;
     padding: 15px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    /* margin-left: 5%;
+    margin-right: 5%; */
 }
 
 .product-info h3, .product-description h3 {
@@ -166,7 +167,11 @@ footer li img {
 
 .product-info p, .product-description p {
     margin: 5px 0;
+    margin-left: 13%;
+    margin-right: 13%;
+    line-height: 1.6;
 }
+
 
 .product-info strong, .product-description strong {
     color: #444;
@@ -201,12 +206,38 @@ footer li img {
     height: auto;
     display: block;
     object-fit: contain;
-    border-radius: 5px; /* Небольшое скругление изображения */
+    border-radius: 5px; 
 }
 
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.lightbox.active {
+    visibility: visible;
+    opacity: 1;
+}
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
 
+/* main{
+    margin: 0 10% ;
+} */
 
-@media (max-width: 830px) {
+@media (max-width: 842px) {
     nav {
         display: none;
         flex-direction: column;
@@ -217,6 +248,11 @@ footer li img {
         background-color: rgb(131, 56, 236);
         padding: 15px 0;
         text-align: center;
+    }
+
+    .product-info p, .product-description p {
+        margin-left: 0;
+        margin-right: 0;
     }
     
     nav ul {
