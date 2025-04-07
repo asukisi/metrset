@@ -151,13 +151,15 @@ footer li img {
     border-radius: 5px;
 }
 
+#container{
+    margin: 0 8%;
+}
+
 .product-info, .product-description {
     background: #f9f9f9;
     border-left: 5px solid #4CAF50;
     padding: 15px;
     margin-bottom: 10px;
-    /* margin-left: 5%;
-    margin-right: 5%; */
 }
 
 .product-info h3, .product-description h3 {
@@ -179,26 +181,26 @@ footer li img {
 
 .certificate-container {
     display: flex;
-    flex-wrap: wrap; /* Перенос элементов на новую строку при нехватке места */
-    justify-content: center; /* Центрирование элементов */
-    gap: 15px; /* Отступы между сертификатами */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 15px; 
     padding: 10px;
 }
 
 .certificate {
-    flex: 1 1 calc(20% - 15px); /* 5 колонок на больших экранах */
-    min-width: 180px; /* Минимальная ширина */
-    background: #fff; /* Белый фон */
-    border: 2px solid #ddd; /* Светлая рамка */
-    border-radius: 10px; /* Округление углов */
-    padding: 10px; /* Внутренний отступ */
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+    flex: 1 1 calc(20% - 15px); 
+    min-width: 180px; 
+    background: #fff; 
+    border: 2px solid #ddd; 
+    border-radius: 10px; 
+    padding: 10px; 
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .certificate:hover {
-    transform: scale(1.05); /* Легкое увеличение при наведении */
-    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.2); /* Усиленная тень */
+    transform: scale(1.05);
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.2); 
 }
 
 .certificate img {
@@ -280,5 +282,12 @@ footer li img {
     }
     #footer-left{
         flex: 1; 
+    }
+    
+}
+
+@media (max-width: 942px) {
+    #container{
+        margin: 0;
     }
 }
