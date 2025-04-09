@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/product.css">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="icon" href="icons/uchebny-god-page.png" type="image/png">
+    <link rel="icon" href="icons/uchebny-god-page-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="icons/uchebny-god-page-32x32.ico" sizes="32x32" type="image/x-icon">
     <script defer src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
@@ -61,6 +62,7 @@
 </header>
     
     <main>
+        <h1 id="title">Экономичный школьный набор для 5-8 классов</h1>
         <div class="gallery">
             <img src="img/school-supplies-kit-5-8-grade-affordable/school-set-description.webp" alt="">
             <img src="img/school-supplies-kit-5-8-grade-affordable/school-set-1.webp" alt="">
@@ -68,6 +70,9 @@
             <img src="img/school-supplies-kit-5-8-grade-affordable/school-set-3.webp" alt="">
             <img src="img/school-supplies-kit-5-8-grade-affordable/school-set-4.webp" alt="">
         </div>
+        
+        <!-- <a class="marketplace-btn ozon" href="https://www.ozon.ru/product/primer-123456/" target="_blank" rel="noopener">Купить на Ozon</a> -->
+        <a class="marketplace-btn wb" href="https://www.wildberries.ru/catalog/166287417/detail.aspx" target="_blank" rel="noopener">Купить на Wildberries</a>
         
         <div class="tabs">
             <button class="tab active" data-tab="description">Описание</button>
@@ -92,7 +97,7 @@
                 <p><strong>Ширина упаковки:</strong> 31 см</p>
             </div>
         
-            <div class="product-description">
+            <div class="product-description product-description-p">
                 <h3>Описание</h3>
                 <p>В мире канцелярии каждый школьник найдёт что-то особенное для себя! Наши предметы, идеально подходящие как для мальчиков, так и для девочек, помогут сделать учебу увлекательной и стильной.</p>
                 
@@ -215,7 +220,7 @@
                 from_email: document.getElementById("email").value,
                 message: document.getElementById("message").value
             }).then(function(response) {
-                ym(100816206, 'reachGoal', 'submit');
+                ym(100816206,'reachGoal','submit')
                 const successMessage = document.createElement('div');
                 successMessage.classList.add('popup-success');
                 successMessage.innerHTML = `
@@ -229,7 +234,6 @@
                     successMessage.remove();
                 });
     
-                // Автоматическое закрытие через 5 секунд
                 setTimeout(() => {
                     successMessage.remove();
                 }, 5000);

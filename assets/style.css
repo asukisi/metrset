@@ -68,7 +68,7 @@ nav a {
     text-decoration: none;
 }
 
-h1{
+#main-heder{
     margin-bottom: 20px;
     text-align: center;
 }
@@ -167,7 +167,7 @@ footer li img {
     margin-bottom: 5px;
 }
 
-.product-info p, .product-description p {
+.product-info p, .product-description-p p {
     margin: 5px 0;
     margin-left: 13%;
     margin-right: 13%;
@@ -209,30 +209,6 @@ footer li img {
     display: block;
     object-fit: contain;
     border-radius: 5px; 
-}
-
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-.lightbox.active {
-    visibility: visible;
-    opacity: 1;
-}
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
 }
 
 /* main{
@@ -291,3 +267,4 @@ footer li img {
         margin: 0;
     }
 }
+
