@@ -211,9 +211,15 @@ footer li img {
     border-radius: 5px; 
 }
 
-/* main{
-    margin: 0 10% ;
-} */
+#nav-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#nav-section{
+    display: none;
+}
 
 @media (max-width: 842px) {
     nav {
@@ -251,6 +257,11 @@ footer li img {
     nav.open {
         display: flex;
     }
+
+    #nav-section{
+        display: flex;
+    }
+
     #feedback-container{
         flex-direction: column;
         align-items: center;

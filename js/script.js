@@ -1,5 +1,6 @@
 document.getElementById("burger-btn").addEventListener("click", function (event) {
     document.getElementById("mobile-menu").classList.toggle("open");
+    document.getElementById("nav-section").classList.toggle("open");    
     event.stopPropagation(); 
 });
 
