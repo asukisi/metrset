@@ -189,14 +189,14 @@ video{
     margin-bottom: 7px;
 }
 
-.marketplace-buttons {
+  /* .marketplace-buttons {
     display: flex;
     gap: 1rem;
-    margin: 1rem 0;
+    margin: 1rem 20%;
     flex-wrap: wrap;
-  }
+  } */
 
-  .marketplace-btn {
+  .wb {
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     text-decoration: none;
@@ -204,7 +204,6 @@ video{
     color: white;
     transition: background-color 0.3s ease;
     text-align: center;
-    flex: 1 1 200px;
   }
 
   .marketplace-btn.ozon {
@@ -214,10 +213,10 @@ video{
     background-color: #0045cc;
   }
 
-  .marketplace-btn.wb {
+  .wb {
     background-color: #A72890;
   }
-  .marketplace-btn.wb:hover {
+  .wb:hover {
     background-color: #8e237c;
   }
 
@@ -229,6 +228,7 @@ video{
       flex: 1 1 auto;
     }
   }
+
 
 .title-description{
     margin-bottom: 5px;
